@@ -4,6 +4,8 @@ import 'pages/notifications.dart';
 import 'pages/profile.dart';
 import 'pages/search.dart';
 import 'pages/create_post.dart';
+import 'package:instagram/models/global.dart';
+import 'models/appbar.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   List<Widget> pages = [
     HomePage(),
     SearchPage(),
@@ -40,13 +41,17 @@ class _MyHomePageState extends State<MyHomePage> {
       length: 5,
       initialIndex: 0,
       child: Scaffold(
-        appBar: AppBar(
-          title: Text('Instagram'),
-        ),
         body: TabBarView(
           children: pages,
         ),
         bottomNavigationBar: Container(
+          // decoration: BoxDecoration(
+          //   boxShadow: [
+          //     BoxShadow(
+          //       offset: Offset(10, 10)
+          //     )
+          //   ]
+          // ),
           margin: EdgeInsets.only(bottom: 20),
           child: new TabBar(
             tabs: [
