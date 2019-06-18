@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             Column(
               children: <Widget> [
                 Container(
-                  height: 80,
+                  height: 85,
                   child: getStories(),
                 ),
                 Divider(),
